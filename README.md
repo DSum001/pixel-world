@@ -14,16 +14,19 @@ python3 -m http.server 8000
 
 ## Files
 
-| File | What it holds |
+| Path | What it holds |
 | --- | --- |
-| `index.html` | Page shell and all UI styles |
-| `data.js` | Terrain, units, buildings, techs and UI text (EN/TH) |
-| `game.js` | Core rules: map generation, cities, combat, turns, pathfinding |
-| `ai.js` | Computer civilizations |
-| `render.js` | Terrain art, the cached map layer and world drawing |
-| `chars.js` | Rigged pixel people and their actions |
-| `animals.js` | Animal sprites, habitats and predator/prey tables |
-| `ui.js` | Input, HUD, dialogs, wildlife and townsfolk behaviour, creature inspector |
+| `index.html` | Page shell and markup |
+| `css/styles.css` | All UI styles |
+| `src/core/data.js` | Terrain, units, buildings, techs and UI text (EN/TH) |
+| `src/core/game.js` | Core rules: map generation, cities, combat, turns, pathfinding (no DOM) |
+| `src/core/ai.js` | Computer civilizations |
+| `src/art/render.js` | Terrain art, the cached map layer and world drawing |
+| `src/art/chars.js` | Rigged pixel people and their actions |
+| `src/art/animals.js` | Animal sprites, habitats and predator/prey tables |
+| `src/ui/ui.js` | Input, HUD, dialogs, wildlife and townsfolk behaviour, creature inspector |
+
+Scripts are plain globals loaded in the order listed in `index.html`; keep that order.
 
 ## Controls
 
